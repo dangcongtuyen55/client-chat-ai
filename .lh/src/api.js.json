@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/api.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1681887233219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1681887233219,
+            "name": "Commit-0",
+            "content": "export const fetchResponse = async (chat) => {\r\n  try {\r\n    // after depoloyment you should change the fetch URL below\r\n    const response = await fetch(\"https://chat-ai-server-eight.vercel.app/\", {\r\n      method: \"POST\",\r\n      headers: {\r\n        \"Content-Type\": \"application/json\",\r\n        // Authoriaztion:\r\n        //   \"Bearer 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\",\r\n      },\r\n      body: JSON.stringify({\r\n        message: chat.map((message) => message.message).join(\" \\n \"),\r\n      }),\r\n    });\r\n\r\n    const data = await response.json();\r\n    return data;\r\n  } catch (error) {\r\n    console.log(error);\r\n  }\r\n};\r\n"
+        }
+    ]
+}
