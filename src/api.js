@@ -1,7 +1,7 @@
 export const fetchResponse = async (chat) => {
   try {
     // after depoloyment you should change the fetch URL below
-    const response = await fetch("/https://chat-ai-server-eight.vercel.app/", {
+    const response = await fetch("https://chat-ai-server-eight.vercel.app/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -21,3 +21,4 @@ export const fetchResponse = async (chat) => {
 };
 
 //https://chat-ai-server-eight.vercel.app/
+//http://localhost:8000/
